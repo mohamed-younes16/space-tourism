@@ -1,0 +1,697 @@
+
+
+body ,html {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Bellefair";
+    
+    
+    
+}
+* {
+box-sizing: border-box;
+color: white;
+padding: 0;
+margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --vio-color:#d0d6f9;
+
+}
+.home {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+}
+
+
+
+
+
+.head-home {
+    margin: 25px 0 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    align-items: center;
+}
+.head-home svg {
+    margin-left: 50px;
+}
+.head-home ul {
+    align-items: center;
+    position: relative;
+    transition: .5s;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 55%;
+    word-spacing: 4.75px;
+    background-color: rgba(255, 255, 255, 0.059);
+    padding-right: 70px;
+    
+}
+
+
+
+
+
+.head-home ul::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.306);
+    top: 50%;
+    left: -48%;
+    width: 50%;
+}
+
+
+.head-home ul li {
+    text-transform: uppercase;
+    font-size: 22px;
+    
+    overflow: hidden;
+}
+.head-home ul li a {
+    text-decoration: none;
+    padding: 25px 0;
+    display: block;
+    font-family: "barlow";
+    position: relative;
+}
+.head-home ul li a::before {
+    transition: .5s;
+    position: absolute;
+    left: -100%;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+
+}
+.head-home ul a:hover::before {
+left: 0;
+}
+.active::before{
+    left: 0 !important;
+}
+/* start landing home  */
+
+.landing-home {
+    margin-top: 18%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.landing-home .explore-home {
+    transition: .5s;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: black;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+
+}
+.landing-home .intro-home {
+    flex-basis: 40%;
+}
+.landing-home .intro-home div:first-child {
+    font-size: 32px;
+    color: var(--vio-color);
+} 
+.landing-home .intro-home div:nth-child(2){
+    font-size: 150px;
+    margin-left: 4px;
+}
+.landing-home .intro-home div:last-child {
+    font-size: 28px;
+    color: var(--vio-color);
+}
+
+
+.menu {display: none;}
+
+.landing-home .explore-home::before {
+    transition: .5s;
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: #ffffff28;
+    z-index: -1;
+    
+}
+.landing-home .explore-home:hover::before  {
+    scale:1.3
+}
+.landing-home .explore-home:hover {
+    scale: .8;
+}
+
+@media (780px<=width<=1100px) {
+.home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+
+    
+}
+.landing-home {
+        flex-flow: column;
+        align-items: center;
+        
+    }
+.intro-home {
+    margin-bottom: 100px;
+    text-align: center;
+    width: 70%;
+}
+.head-home ul {
+    flex-basis: 70%;
+}
+.head-home ul::before {
+    display: none;
+} 
+}
+
+/* ______________________________________________ */
+@media (width<=780px) {
+.menu {
+    display: block;
+    font-size: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 20;
+}
+    .home {
+        background-image: url(./assets/home/background-home-mobile.jpg);
+    
+        
+    }
+    .landing-home {
+        margin-top: 23vh;
+        flex-flow: column;
+        align-items: center;
+        
+    }
+.intro-home {
+    margin-bottom: 100px;
+    text-align: center;
+    width: 70%;
+}
+.landing-home .explore-home {
+    font-size: 24px;
+}
+.landing-home .intro-home div:nth-child(2) {
+    font-size: 80px;
+}
+.landing-home .intro-home div:last-child {
+    font-size: 15px ;
+}
+.head-home ul {
+    padding: 0 30px;
+    flex-flow: column;
+    backdrop-filter: blur(31px);
+    background-color: #ececec2b;
+    height: 100vh;
+    position: fixed;
+    justify-content: flex-start;
+    right: 0;
+    width: 40vh;
+    top: 0;
+    z-index: -5;
+    align-items: flex-start;
+    opacity: 0;
+    translate: 0 -50px;
+}
+.head-home ul li:first-child {
+    margin-top: 30%;
+}
+.head-home ul::before {
+    display: none;
+} 
+}
+
+.showed {
+    translate: 0 !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+}
+
+
+/* end home  */
+
+
+
+
+/* ______________________________________________ */
+
+
+
+
+
+/* start destination  */
+.destination {
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+}
+
+.pick-dest {
+    letter-spacing: 4.7px;
+    text-transform: uppercase;
+    margin-left: 12%;
+    margin-top: 70px;
+    font-family: "barlow condensed";
+    font-size: 28px;
+}
+.pick-dest span {
+    font-family: "barlow condensed";
+    color: #666;
+    
+    margin-right: .5em;
+}
+.landing-dest {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: translate .4s ease-in , opacity .4s ease-in,scale .4s ease-in;
+
+}
+.planet {
+    margin-top: 50px;
+   
+}
+
+.switch-dest {
+    display: flex;
+    flex-flow: column;
+    flex-basis: 30%;
+
+}
+.switch-dest ul  {
+   
+    display: flex;
+    font-size: 28px;
+    margin-bottom: 20px;
+    
+}
+.switch-dest ul li  {
+position: relative;
+overflow: hidden;
+}.switch-dest ul li a {
+    display: block;
+    position: relative;
+    padding: 0px 20px 10px 0;
+    
+}
+.switch-dest ul a::before  {
+    transition: .4s;
+    transition: .5s;
+    position: absolute;
+    left: -100%;
+    content: "";
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(130, 130, 130);
+}
+.switch-dest ul a:hover::before {
+    left: 0;
+}
+.switch-dest ul a.active::before {
+    left: 0 ;
+    background-color: white ;
+}
+
+.switch-dest .pl-name {
+    font-size: 100px;
+}
+.desc {
+    color: var(--vio-color);
+    font-size: 22px;
+    line-height: 32px;
+    padding: 40px 0;
+    min-height: 200px;
+    margin-bottom: 30px;
+}
+.switch-dest .desc {
+border-bottom: 1px solid rgba(137, 137, 137, 0.398);
+}
+.switch-dest .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.switch-dest .info .dis {
+    width: 40%;
+    white-space: nowrap;
+}
+.switch-dest .info .dis div:first-child {
+    color: #d0d6f9;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: "barlow";
+    margin-bottom: 15px;
+}
+.switch-dest .info .dis div:last-child {
+font-size: 32px;
+text-transform: uppercase;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (width <= 1024px) {
+    .destination {
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+    .pick-dest {
+        margin-left: 4vh;
+        margin-top: 40px;
+    }
+.landing-dest {
+    flex-flow: column;
+}
+.switch-dest {
+    width: 70%;
+    margin-top: 4vh;
+    align-items: center;
+}
+
+.planet {
+    width: 28vh;
+}
+.switch-dest .pl-name {
+    font-size: 80px;
+}
+.crew {
+    background-image: url(./assets/crew/background-crew-tablet.jpg);
+}
+.tech{
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+}
+}
+
+@media (width <= 768px) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-mobile.jpg);
+    }
+    .destination {
+        background-image: url(./assets/destination/background-destination-mobile.jpg);
+    }
+    .tech{
+        background-image: url(./assets/technology/background-technology-mobile.jpg);
+    }
+
+}
+
+
+
+
+/* start crew */
+
+.crew {
+    background-image: url(./assets/crew/background-crew-desktop.jpg);
+}
+.crew-info {
+    flex-basis: 26%;
+}
+.job {
+    color:rgb(143, 145, 150);
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.crew-name {
+    font-size: 56px;
+    text-transform: uppercase;
+    translate: 2px 0;
+    white-space:nowrap;
+}
+
+.crew-switch  {
+    display: flex;
+}
+.crew-img {
+    min-height: 706px;
+}
+.crew-switch li {
+    margin-right: 30px;
+    transition: .5s;
+} 
+
+.crew-switch  a {
+    transition: .5s;
+    background-color: #363841;
+    border-radius: 50%;
+    height: 20px;
+    display: block;
+    width: 20px;
+}
+.crew-switch a:hover  {
+    background-color: rgb(133, 134, 139);
+}
+.crew-switch .active {
+    background-color: white;
+}
+
+@media (width<=1100px) {
+    .crew-info {
+        width: 65%;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .crew-img {
+        scale: .9;
+    translate: 0 35px;
+    }
+}
+@media (width<=768px) {
+    .crew  .landing-dest{
+        
+        flex-flow: column-reverse;
+        
+    }
+    .crew-img {
+        border-bottom: 1px var(--vio-color) solid;
+        margin-bottom: 5vh;
+        scale: .6;
+        translate:  0 -15%;
+    
+    }
+    .landing-dest {
+        margin-top:0 ;
+    }
+    .crew-info {
+        width: 80%;
+        translate:  0 -30%;
+    }
+    .crew-switch {
+        
+        order: -5;
+    width: 40%;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    }
+    .crew-switch li {
+        margin: 0;
+    }
+}
+
+/* start technology  */
+
+.tech {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+}
+.tech-box {
+    height: 60vh;
+   justify-content: flex-start;
+    flex-flow: row-reverse wrap;
+}
+.tech-switch {
+    align-items: center;
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    
+    
+}
+
+.tech-switch ul {
+    margin-right: 100px;
+}
+.tech-switch ul li a  {
+    border:1px rgb(131, 131, 131) solid;
+    margin-bottom: 30px;
+    transition: .3s;
+    border-radius: 50%;
+    height: 2.5em;
+    display:flex;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+}
+.tech-switch ul li a:hover {
+    border-color: white;
+} 
+.tech-switch ul li .cur-tech {
+    background-color: white;
+    color: black;
+}
+.tech-info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--vio-color);
+    font-family: "barlow";
+    text-transform: uppercase;
+}
+.vehicle{
+    height: 515px;;
+    width: 500px;
+    background-repeat: no-repeat;
+    margin-bottom: 5vh;
+    background-size: contain;
+
+}
+.launch {
+    background-image: url(./assets/technology/image-launch-vehicle-portrait.jpg);
+
+}
+.port {
+    background-image: url(./assets/technology/image-spaceport-portrait.jpg);
+
+}
+.capsule {
+    background-image: url(./assets/technology/image-space-capsule-portrait.jpg);
+
+}
+
+
+
+
+
+@media (width <= 1300px) {
+    .launch {
+        background-image: url(./assets/technology/image-launch-vehicle-landscape.jpg);
+    
+    }
+    .port {
+        background-image: url(./assets/technology/image-spaceport-landscape.jpg);
+    
+    }
+    .capsule {
+        background-image: url(./assets/technology/image-space-capsule-landscape.jpg);
+    
+    }
+    .vehicle {
+        background-size: contain;
+        
+        width: 100%;
+    }
+    .tech-switch  {
+        text-align: center;
+        margin:  0 auto;
+        flex-flow: column;
+        flex-basis: 80%;
+        align-items: center;
+
+    }
+    .tech-info {
+        width: 90%;
+    }
+    .tech-switch ul {
+        margin: 0;
+        width: 40%;
+        display:  flex;
+        justify-content: space-between;
+    }
+    .tech-switch ul li a{
+        font-size: 25px;
+    }
+    .crew-name {
+       font-size:40px ; 
+    }
+}
+@media (width <= 1024px) {
+    .vehicle {
+        height: 37vh;
+    
+    }
+}
+@media (width <=768px) {
+    .tech-switch ul {
+        width: 75%;
+    }
+    .tech-box {
+        margin-top: 50px;
+    }
+    .vehicle {
+        height: 29vh;
+    
+    }
+    .crew-name {
+        font-size:28px ; 
+     }
+     .desc {
+        font-size: 20px;
+     }
+     .pl-name {
+        font-size: 56px;
+     }
+     
+     .switch-dest .info {
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+     }
+     .switch-dest .info .dis {
+        width: 80%;
+        text-align: center;
+     }
+     .pick-dest{
+        font-size: 18px;
+     }
+}
+@media (width <= 500px) {
+    
+    .vehicle {
+        height: 24vh;
+    
+    }
+}
+
+.hidden {
+    opacity: 0;
+    translate: 150px;
+    scale: .5;
+}

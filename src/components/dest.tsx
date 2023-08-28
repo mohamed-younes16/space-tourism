@@ -15,7 +15,7 @@ export default function Dest() {
   const navigator = useNavigate()
   const path =useLocation()
   
-  const naving = (e:Event,link:string) => {
+  const naving = (e: React.MouseEvent<HTMLAnchorElement>,link:string) => {
   e.preventDefault(); 
   if(link !== path.pathname) {
     maindiv.current ? maindiv.current.classList.add("hidden"):"";

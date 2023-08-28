@@ -13,7 +13,7 @@ export default function Crew() {
   const navigator = useNavigate()
   const maindiv = useRef<HTMLDivElement>(null)
 
-  const naving = (e,link:string) => {
+  const naving = (e:React.MouseEvent<HTMLAnchorElement>,link:string) => {
   e.preventDefault(); 
   maindiv.current ? maindiv.current.classList.add("hidden"):"";
   setTimeout(()=>navigator(link),400) 

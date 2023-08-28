@@ -4,7 +4,7 @@ import './index.css'
 import { BrowserRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById('root')!).render(
   
-    <BrowserRouter basename='tour'>
+    <BrowserRouter basename='space-tourism'>
       <App />
     </BrowserRouter>
   
